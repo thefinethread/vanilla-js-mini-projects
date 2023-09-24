@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+    background-color: #fff;
+}
+
+.container {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 30px;
+    width: 380px;
+}
+.container form {
+    width: 100%;
+}
+.container h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container .form-control {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.form-control small {
+    margin-top: 1px;
+    color: red;
+    font-size: 0.8rem;
+    display: none;
+}
+
+.form-control.error small {
+    display: block;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 500;
+    color: #666;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    outline: 1px solid #999;
+    padding: 8px;
+}
+
+.form-control.error input {
+    outline: 2px solid orangered;
+}
+
+.form-control input:focus {
+    outline: 2px solid;
+}
+
+.form-control.error input:focus {
+    outline: 2px solid orangered;
+}
+
+.form-control.success input {
+    outline: 2px solid rgb(22, 218, 25);
+}
+
+.form-control input:focus {
+    outline: 2px solid;
+}
+
+.form-control.success input:focus {
+    outline: 2px solid rgb(22, 218, 25);
+}
+
+form #submit {
+    width: 100%;
+    border: none;
+    padding-block: 9px;
+    background-color: rgb(66, 116, 224);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
