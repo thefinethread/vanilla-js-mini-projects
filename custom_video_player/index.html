@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Custom Video Player</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <video src="pexels.mp4" class="video"></video>
+            <div class="controls">
+                <ul>
+                    <li class="play-pause-btn">
+                        <i class="ri-play-fill"></i>
+                    </li>
+                    <li class="stop-btn">
+                        <i class="ri-stop-fill"></i>
+                    </li>
+                    <li class="timeline">
+                        <input
+                            type="range"
+                            id="timeline"
+                            min="0"
+                            max="100"
+                            step="0.1"
+                            value="0"
+                        />
+                    </li>
+                    <li id="timestamp">00:10/00:1</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
