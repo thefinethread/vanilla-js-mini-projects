@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-bg-color: rgb(46, 21, 129);
+    --secondary-bg-color: rgb(29, 13, 80);
+}
+
+body {
+    overflow-x: hidden;
+    transition: transform 0.3s ease-in;
+}
+
+body.show-nav {
+    transform: translateX(200px);
+}
+
+.nav {
+    transform: translateX(-100%);
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    background-color: var(--primary-bg-color);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    width: 200px;
+    height: 100dvh;
+    color: #fff;
+}
+
+.nav .pfp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 43px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav img {
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-bg-color);
+}
+
+.nav ul li {
+    list-style: none;
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav li:hover {
+    cursor: pointer;
+    background-color: var(--secondary-bg-color);
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.header {
+    text-align: center;
+    color: #fff;
+    background-color: var(--primary-bg-color);
+    padding-block: 30px;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.header .menu-icon {
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 32px;
+    width: 32px;
+    border-radius: 4px;
+    background-color: var(--secondary-bg-color);
+    cursor: pointer;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.main ul {
+    margin-left: 40px;
+}
