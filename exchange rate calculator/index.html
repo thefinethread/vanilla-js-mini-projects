@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exchange Rate Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Exchange Rate Calculator</h2>
+            <div class="input-container">
+                <div class="first-row">
+                    <input type="number" id="input-1" />
+                    <select class="countries-list" id="first-select"></select>
+                </div>
+                <div class="second-row">
+                    <i id="swap" class="ri-swap-line"></i>
+                    <p class="exchange-rate"></p>
+                </div>
+                <div class="third-row">
+                    <input type="number" id="input-2" />
+                    <select class="countries-list" id="second-select"></select>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
