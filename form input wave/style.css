@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    background-color: rgb(26, 146, 140);
+    color: #fff;
+}
+
+.container {
+    background-color: darkslategrey;
+    padding: 30px 40px;
+    border-radius: 8px;
+    width: 380px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.container label {
+    position: absolute;
+    bottom: 7px;
+    margin-bottom: 10px;
+    display: block;
+}
+label span {
+    letter-spacing: -4px;
+    display: inline-block;
+}
+
+.container input {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-block: 14px;
+    font-size: 1rem;
+    transition: border-bottom-color 0.15s ease;
+}
+
+input:focus {
+    outline: none;
+}
+
+.container button {
+    width: 100%;
+    background-color: rgb(32, 154, 178);
+    border: none;
+    color: #fff;
+    padding-block: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: rgb(26, 121, 139);
+}
+
+.container .footer-text {
+    margin-top: 36px;
+    text-align: center;
+}
+
+.footer-text a {
+    color: rgb(47, 210, 243);
+}
