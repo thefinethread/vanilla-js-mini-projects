@@ -79,6 +79,7 @@ button:active {
 }
 
 button:disabled {
+    transform: scale(1);
     cursor: not-allowed;
     background-color: #6d6d6d;
 }
