@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background-image: url(mountain.jpg);
+    height: calc(100dvh + 60px);
+    width: calc(100dvw + 60px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0px);
+    position: absolute;
+    top: -30px;
+    left: -30px;
+}
+
+.text {
+    position: absolute;
+    color: rgba(255, 255, 255, 1);
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
