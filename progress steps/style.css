@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    height: 100dvh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 60dvw;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container .progress-bar-container {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    position: relative;
+}
+
+.progress-bar {
+    position: absolute;
+    height: 4px;
+    background-color: blue;
+    left: 0;
+    width: 0%;
+    transition: width 0.9s ease;
+}
+
+.progress-steps {
+    position: absolute;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.progress-step {
+    z-index: 2;
+    height: 36px;
+    width: 36px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.8);
+    transition: border 0.9s ease;
+}
+.progress-step.active {
+    border: 3px solid rgb(15, 85, 225);
+}
+
+.btn-container {
+    margin-top: 30px;
+    gap: 20px;
+}
+
+button {
+    background-color: rgb(13, 89, 239);
+    border: none;
+    padding: 8px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #6d6d6d;
+}
