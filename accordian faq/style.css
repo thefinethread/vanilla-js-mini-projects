@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    height: 100dvh;
+    width: 100vw;
+    background-color: rgb(237, 172, 237);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: #111;
+    padding-inline: 20px;
+    line-height: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-block: 20px;
+}
+
+.accordian {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 2px 6px rgba(199, 119, 199, 0.8);
+    cursor: pointer;
+}
+
+.accordian .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.accordian p {
+    color: #333;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.question i {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.accordian.active i {
+    transform: rotate(-180deg);
+}
