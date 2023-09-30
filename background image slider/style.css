@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    background-image: url(images/autumn.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    transition: background-image 0.4s ease;
+}
+
+/* to make body with dark overlay */
+body::before {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* to make a window of 70vw and 70vh for containing the light part of image */
+/* overflow:hidden is necessary , and position:Relative */
+/* so that the inner slide containing image would be positioned absolute*/
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 70dvh;
+    width: 70dvw;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* make it to cover whole window but since its parent element only allow 70vw and 70vh 
+and overflow is hidden so this element will cover whole window*/
+.slide {
+    background-image: url(images/autumn.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: -15vh;
+    left: -15vw;
+    z-index: 1;
+    transition: background-image 0.4s ease;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    border: 2px solid rgb(102, 102, 243);
+    color: #fff;
+    padding: 24px 4px;
+    font-weight: 700;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#prev {
+    left: calc(15vw - 42px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next {
+    right: calc(15vw - 42px);
+    top: 50%;
+    transform: translateY(-50%);
+}
