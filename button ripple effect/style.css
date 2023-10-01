@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+#btn {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: mediumvioletred;
+    border: none;
+    font-size: 1rem;
+    padding: 20px 34px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+}
+
+#btn:active {
+    background-color: rgb(142, 17, 96);
+}
+
+#btn .circle {
+    position: absolute;
+    background-color: #fff;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
