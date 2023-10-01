@@ -5,11 +5,24 @@ const digitalClock = document.querySelector('.digital-clock');
 const dateEl = document.querySelector('.date');
 const themeBtn = document.querySelector('.theme-icon');
 
+restoreThemeFromLS = () => {
+    if (localStorage.getItem('clock-theme')) {
+        if (localStorage.getItem('clock-theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+            themeBtn.firstElementChild.className = 'ri-sun-line';
+        }
+    }
+};
+
 changeTheme = () => {
     document.documentElement.classList.toggle('dark');
-    document.documentElement.classList.contains('dark')
-        ? (themeBtn.firstElementChild.className = 'ri-sun-line')
-        : (themeBtn.firstElementChild.className = 'ri-moon-line');
+    if (document.documentElement.classList.contains('dark')) {
+        themeBtn.firstElementChild.className = 'ri-sun-line';
+        localStorage.setItem('clock-theme', 'dark');
+    } else {
+        themeBtn.firstElementChild.className = 'ri-moon-line';
+        localStorage.setItem('clock-theme', 'light');
+    }
 };
 
 setDigitalClockTime = () => {
@@ -74,5 +87,6 @@ setStartingNeedlesPosition = () => {
 
 setStartingNeedlesPosition();
 setIntervalForNeedles();
+restoreThemeFromLS();
 
 themeBtn.addEventListener('click', changeTheme);
