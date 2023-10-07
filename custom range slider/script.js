@@ -1,4 +1,4 @@
-const inputEl = document.querySelector('#input-1');
+const inputEl = document.querySelector('#input');
 
 inputEl.style.background = `linear-gradient(to right, orangered ${inputEl.value}%, #fff ${inputEl.value}%)`;
 
@@ -15,3 +15,8 @@ const onChange = (e) => {
 };
 
 inputEl.addEventListener('input', onChange);
+window.addEventListener(
+    'DOMContentLoaded',
+    () =>
+        (inputEl.style.background = `linear-gradient(to right, orangered ${inputEl.value}%, #fff ${inputEl.value}%)`)
+);
